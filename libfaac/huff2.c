@@ -87,6 +87,13 @@ static int huffcode(int *qs /* quantized spectrum */,
     int maxesc = 0;
 #endif
 
+static int max_len = 0;
+if (len > max_len)
+{
+	max_len = len;
+}
+printf("max_len %d \n", max_len);
+
     if (coder)
         datacnt = coder->datacnt;
     else

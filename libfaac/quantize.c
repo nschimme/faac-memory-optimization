@@ -50,17 +50,17 @@
 #define NOISEFLOOR 0.4
 
 // band sound masking
-static void bmask(CoderInfo *coderInfo, double *xr0, double *bandqual,
-                  int gnum, double quality)
+static void bmask(CoderInfo *coderInfo, float *xr0, float *bandqual,
+                  int gnum, float quality)
 {
   int sfb, start, end, cnt;
   int *cb_offset = coderInfo->sfb_offset;
   int last;
-  double avgenrg;
-  double powm = 0.4;
-  double totenrg = 0.0;
+  float avgenrg;
+  float powm = 0.4;
+  float totenrg = 0.0;
   int gsize = coderInfo->groups.len[gnum];
-  double *xr;
+  float *xr;
   int win;
   int enrgcnt = 0;
 
@@ -83,7 +83,7 @@ static void bmask(CoderInfo *coderInfo, double *xr0, double *bandqual,
       }
   }
 
-  if (totenrg < ((NOISEFLOOR * NOISEFLOOR) * (double)enrgcnt))
+  if (totenrg < ((NOISEFLOOR * NOISEFLOOR) * (float)enrgcnt))
   {
       for (sfb = 0; sfb < coderInfo->sfbn; sfb++)
           bandqual[sfb] = 0.0;
@@ -93,8 +93,8 @@ static void bmask(CoderInfo *coderInfo, double *xr0, double *bandqual,
 
   for (sfb = 0; sfb < coderInfo->sfbn; sfb++)
   {
-    double avge, maxe;
-    double target;
+    float avge, maxe;
+    float target;
 
     start = cb_offset[sfb];
     end = cb_offset[sfb + 1];
@@ -106,7 +106,7 @@ static void bmask(CoderInfo *coderInfo, double *xr0, double *bandqual,
     {
         for (cnt = start; cnt < end; cnt++)
         {
-            double e = xr[cnt]*xr[cnt];
+            float e = xr[cnt]*xr[cnt];
             avge += e;
             if (maxe < e)
                 maxe = e;
@@ -137,7 +137,7 @@ static void bmask(CoderInfo *coderInfo, double *xr0, double *bandqual,
         target += (1.0 - NOISETONE) * 0.45 * pow(maxe/avgenrg, powm);
     }
 
-    target *= 10.0 / (1.0 + ((double)(start+end)/last));
+    target *= 10.0 / (1.0 + ((float)(start+end)/last));
 
     bandqual[sfb] = target * quality;
   }
@@ -146,8 +146,8 @@ static void bmask(CoderInfo *coderInfo, double *xr0, double *bandqual,
 enum {MAXSHORTBAND = 36};
 // use band quality levels to quantize a group of windows
 static void qlevel(CoderInfo *coderInfo,
-                   const double *xr0,
-                   const double *bandqual,
+                   const float *xr0,
+                   const float *bandqual,
                    int gnum,
                    int pnslevel
                   )
@@ -155,12 +155,12 @@ static void qlevel(CoderInfo *coderInfo,
     int sb, cnt;
 #if !defined(__clang__) && defined(__GNUC__) && (GCC_VERSION >= 40600)
     /* 2^0.25 (1.50515 dB) step from AAC specs */
-    static const double sfstep = 1.0 / log10(sqrt(sqrt(2.0)));
+    static const float sfstep = 1.0 / log10(sqrt(sqrt(2.0)));
 #else
-    static const double sfstep = 20 / 1.50515;
+    static const float sfstep = 20 / 1.50515;
 #endif
     int gsize = coderInfo->groups.len[gnum];
-    double pnsthr = 0.1 * pnslevel;
+    float pnsthr = 0.1 * pnslevel;
 #ifdef __SSE2__
     int cpuid[4];
     int sse2 = 0;
@@ -178,14 +178,14 @@ static void qlevel(CoderInfo *coderInfo,
 
     for (sb = 0; sb < coderInfo->sfbn; sb++)
     {
-      double sfacfix;
+      float sfacfix;
       int sfac;
-      double rmsx;
-      double etot;
+      float rmsx;
+      float etot;
       int xitab[8 * MAXSHORTBAND];
       int *xi;
       int start, end;
-      const double *xr;
+      const float *xr;
       int win;
 
       if (coderInfo->book[coderInfo->bandcnt] != HCB_NONE)
@@ -203,12 +203,12 @@ static void qlevel(CoderInfo *coderInfo,
       {
           for (cnt = start; cnt < end; cnt++)
           {
-              double e = xr[cnt] * xr[cnt];
+              float e = xr[cnt] * xr[cnt];
               etot += e;
           }
           xr += BLOCK_LEN_SHORT;
       }
-      etot /= (double)gsize;
+      etot /= (float)gsize;
       rmsx = sqrt(etot / (end - start));
 
       if ((rmsx < NOISEFLOOR) || (!bandqual[sb]))
@@ -267,7 +267,7 @@ static void qlevel(CoderInfo *coderInfo,
 
           for (cnt = 0; cnt < end; cnt++)
           {
-              double tmp = fabs(xr[cnt]);
+              float tmp = fabs(xr[cnt]);
 
               tmp *= sfacfix;
               tmp = sqrt(tmp * sqrt(tmp));
@@ -284,11 +284,11 @@ static void qlevel(CoderInfo *coderInfo,
     }
 }
 
-int BlocQuant(CoderInfo *coder, double *xr, AACQuantCfg *aacquantCfg)
+int BlocQuant(CoderInfo *coder, float *xr, AACQuantCfg *aacquantCfg)
 {
-    double bandlvl[MAX_SCFAC_BANDS];
+    float bandlvl[MAX_SCFAC_BANDS];
     int cnt;
-    double *gxr;
+    float *gxr;
 
     coder->global_gain = 0;
 
@@ -308,7 +308,7 @@ int BlocQuant(CoderInfo *coder, double *xr, AACQuantCfg *aacquantCfg)
         for (cnt = 0; cnt < coder->groups.n; cnt++)
         {
             bmask(coder, gxr, bandlvl, cnt,
-                  (double)aacquantCfg->quality/DEFQUAL);
+                  (float)aacquantCfg->quality/DEFQUAL);
             qlevel(coder, gxr, bandlvl, cnt, aacquantCfg->pnslevel);
             gxr += coder->groups.len[cnt] * BLOCK_LEN_SHORT;
         }
@@ -378,7 +378,7 @@ void CalcBW(unsigned *bw, int rate, SR_INFO *sr, AACQuantCfg *aacquantCfg)
     }
     aacquantCfg->max_cbs = cnt;
     if (aacquantCfg->pnslevel)
-        *bw = (double)l * rate / (BLOCK_LEN_SHORT << 1);
+        *bw = (float)l * rate / (BLOCK_LEN_SHORT << 1);
 
     // find max long frame band
     max = *bw * (BLOCK_LEN_LONG << 1) / rate;
@@ -392,12 +392,12 @@ void CalcBW(unsigned *bw, int rate, SR_INFO *sr, AACQuantCfg *aacquantCfg)
     aacquantCfg->max_cbl = cnt;
     aacquantCfg->max_l = l;
 
-    *bw = (double)l * rate / (BLOCK_LEN_LONG << 1);
+    *bw = (float)l * rate / (BLOCK_LEN_LONG << 1);
 }
 
 enum {MINSFB = 2};
 
-static void calce(double *xr, int *bands, double e[NSFB_SHORT], int maxsfb,
+static void calce(float *xr, int *bands, float e[NSFB_SHORT], int maxsfb,
                   int maxl)
 {
     int sfb;
@@ -415,8 +415,8 @@ static void calce(double *xr, int *bands, double e[NSFB_SHORT], int maxsfb,
     }
 }
 
-static void resete(double min[NSFB_SHORT], double max[NSFB_SHORT],
-                   double e[NSFB_SHORT], int maxsfb)
+static void resete(float min[NSFB_SHORT], float max[NSFB_SHORT],
+                   float e[NSFB_SHORT], int maxsfb)
 {
     int sfb;
     for (sfb = MINSFB; sfb < maxsfb; sfb++)
@@ -428,13 +428,13 @@ static void resete(double min[NSFB_SHORT], double max[NSFB_SHORT],
 static int groups = 0;
 static int frames = 0;
 #endif
-void BlocGroup(double *xr, CoderInfo *coderInfo, AACQuantCfg *cfg)
+void BlocGroup(float *xr, CoderInfo *coderInfo, AACQuantCfg *cfg)
 {
     int win, sfb;
-    double e[NSFB_SHORT];
-    double min[NSFB_SHORT];
-    double max[NSFB_SHORT];
-    const double thr = 3.0;
+    float e[NSFB_SHORT];
+    float min[NSFB_SHORT];
+    float max[NSFB_SHORT];
+    const float thr = 3.0;
     int win0;
     int fastmin;
     int maxsfb, maxl;
@@ -494,6 +494,6 @@ void BlocGroup(double *xr, CoderInfo *coderInfo, AACQuantCfg *cfg)
 void BlocStat(void)
 {
 #if PRINTSTAT
-    printf("frames:%d; groups:%d; g/f:%f\n", frames, groups, (double)groups/frames);
+    printf("frames:%d; groups:%d; g/f:%f\n", frames, groups, (float)groups/frames);
 #endif
 }

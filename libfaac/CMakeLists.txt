@@ -29,7 +29,7 @@ list(APPEND FAAC_SOURCE
     ./huffdata.c
     ./quantize.c
     ./stereo.c
-    ./tns.c
+    # ./tns.c
     ./util.c
 )
 

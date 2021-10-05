@@ -1,0 +1,1043 @@
+desc: (none)
+cmd: ./test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=3571604
+mem_heap_B=200740
+mem_heap_extra_B=1116
+mem_stacks_B=0
+heap_tree=peak
+n16: 200740 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11056 in 15 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n2: 4096 0x10E9A5: MDCT (filtbank.c:431)
+  n1: 4096 0x10F5CC: FilterBank (filtbank.c:166)
+   n1: 4096 0x10A1B0: faacEncEncode (frame.c:524)
+    n0: 4096 0x10950C: main (test.c:83)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 4096 0x10E9B0: MDCT (filtbank.c:432)
+  n1: 4096 0x10F5CC: FilterBank (filtbank.c:166)
+   n1: 4096 0x10A1B0: faacEncEncode (frame.c:524)
+    n0: 4096 0x10950C: main (test.c:83)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=13309475
+mem_heap_B=196644
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=25395372
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=37060693
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=47618736
+mem_heap_B=196644
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=detailed
+n15: 196644 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11056 in 16 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n2: 4096 0x10E9A5: MDCT (filtbank.c:431)
+  n1: 4096 0x10F5CC: FilterBank (filtbank.c:166)
+   n1: 4096 0x10A1B0: faacEncEncode (frame.c:524)
+    n0: 4096 0x10950C: main (test.c:83)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=58930349
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=77953399
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=92984745
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=106759615
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=119581296
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=138129823
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=155497308
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=167201360
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=180427523
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=detailed
+n14: 193060 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11568 in 17 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=190127234
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=205326925
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=213089169
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=228018662
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=241186248
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=257813812
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=268854257
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=279633676
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=290745811
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=detailed
+n14: 192548 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11056 in 17 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=304468903
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=318229559
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=detailed
+n14: 193060 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11568 in 17 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=329072822
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=345850560
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=detailed
+n14: 192548 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11056 in 17 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=360024058
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=371080005
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=389947500
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=400608380
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=416313358
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=432290909
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=448079302
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=458651190
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=474556638
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=detailed
+n14: 192548 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11056 in 17 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=490225794
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=501119561
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=521977312
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=537893381
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=548314815
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=563939925
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=574361159
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=589982607
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=600556627
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=611314311
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=621904491
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=632393768
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=detailed
+n13: 176164 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n0: 11056 in 18 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=643016671
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=651082115
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=658854073
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=666626389
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=674571842
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=682373464
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=690266998
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=698157118
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=705919745
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=detailed
+n14: 193060 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11568 in 17 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=713941733
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=721704100
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=729632724
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=737430903
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=745216675
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=753107129
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=760966807
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=768868572
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=776633128
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=784396498
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=detailed
+n14: 193060 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x10A45B: faacEncEncode (frame.c:410)
+  n0: 32768 0x10950C: main (test.c:83)
+ n1: 32768 0x10F06E: FilterBankInit (filtbank.c:59)
+  n1: 32768 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 32768 0x10940A: main (test.c:34)
+ n1: 16628 0x109CC6: faacEncOpen (frame.c:254)
+  n0: 16628 0x10940A: main (test.c:34)
+ n2: 16384 0x10D47D: PsyInit (blockswitch.c:131)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 16384 0x10D5C8: PsyInit (blockswitch.c:155)
+  n1: 16384 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 16384 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 16384 0x10F081: FilterBankInit (filtbank.c:60)
+  n1: 16384 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 16384 0x10940A: main (test.c:34)
+ n1: 16384 0x10F258: FilterBank (filtbank.c:105)
+  n1: 16384 0x10A1B0: faacEncEncode (frame.c:524)
+   n0: 16384 0x10950C: main (test.c:83)
+ n0: 11568 in 17 places, all below massif's threshold (1.00%)
+ n0: 8192 0x109439: main (test.c:43)
+ n1: 8192 0x10F096: FilterBankInit (filtbank.c:64)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n1: 8192 0x10F0B8: FilterBankInit (filtbank.c:66)
+  n1: 8192 0x109EB7: faacEncOpen (frame.c:319)
+   n0: 8192 0x10940A: main (test.c:34)
+ n0: 4096 0x10941B: main (test.c:36)
+ n1: 3072 0x4A29E83: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 3072 0x4A3A04F: _IO_doallocbuf (genops.c:347)
+   n1: 2048 0x4A390AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 2048 0x4A37834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 2048 0x4A37834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+   n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n2: 2048 0x10D48E: PsyInit (blockswitch.c:133)
+  n1: 2048 0x1099F4: faacEncSetConfiguration (frame.c:223)
+   n0: 2048 0x10949E: main (test.c:66)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=792168779
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=799937237
+mem_heap_B=193060
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=807739331
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=815604875
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=823406034
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=831317209
+mem_heap_B=192548
+mem_heap_extra_B=1100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=839187339
+mem_heap_B=176204
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=847002853
+mem_heap_B=176164
+mem_heap_extra_B=1092
+mem_stacks_B=0
+heap_tree=empty

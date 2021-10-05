@@ -32,7 +32,7 @@ extern "C" {
 /* Allow encoding of Digital Radio Mondiale (DRM) with transform length 1024 */
 //#define DRM_1024
 
-#define MAX_CHANNELS 64
+#define MAX_CHANNELS 2
 
 #ifdef DRM
 #ifdef DRM_1024
@@ -77,8 +77,8 @@ typedef struct {
     int direction;                       /* Filtering direction */
     int coefCompress;                    /* Are coeffs compressed? */
     int length;                          /* Length, in bands */
-    double aCoeffs[TNS_MAX_ORDER+1];     /* AR Coefficients */
-    double kCoeffs[TNS_MAX_ORDER+1];     /* Reflection Coefficients */
+    float aCoeffs[TNS_MAX_ORDER+1];     /* AR Coefficients */
+    float kCoeffs[TNS_MAX_ORDER+1];     /* Reflection Coefficients */
     int index[TNS_MAX_ORDER+1];          /* Coefficient indices */
 } TnsFilterData;
 
@@ -102,10 +102,10 @@ typedef struct {
 typedef struct
 {
     int psy_init_mc;
-    double dr_mc[LPC][BLOCK_LEN_LONG],e_mc[LPC+1+1][BLOCK_LEN_LONG];
-    double K_mc[LPC+1][BLOCK_LEN_LONG], R_mc[LPC+1][BLOCK_LEN_LONG];
-    double VAR_mc[LPC+1][BLOCK_LEN_LONG], KOR_mc[LPC+1][BLOCK_LEN_LONG];
-    double sb_samples_pred_mc[BLOCK_LEN_LONG];
+    float dr_mc[LPC][BLOCK_LEN_LONG],e_mc[LPC+1+1][BLOCK_LEN_LONG];
+    float K_mc[LPC+1][BLOCK_LEN_LONG], R_mc[LPC+1][BLOCK_LEN_LONG];
+    float VAR_mc[LPC+1][BLOCK_LEN_LONG], KOR_mc[LPC+1][BLOCK_LEN_LONG];
+    float sb_samples_pred_mc[BLOCK_LEN_LONG];
     int thisLineNeedsResetting_mc[BLOCK_LEN_LONG];
     int reset_count_mc;
 } BwpInfo;
@@ -133,8 +133,8 @@ typedef struct {
 #define DATASIZE (3*FRAME_LEN/2)
 
     struct {
-        int data;
-        int len;
+        short int data;
+        short int len;
     } s[DATASIZE];
     int datacnt;
 
@@ -147,8 +147,8 @@ typedef struct {
     int iLenReordSpData;
 #endif
 
-    TnsInfo tnsInfo;
-    BwpInfo bwpInfo;
+    // TnsInfo tnsInfo;
+    // BwpInfo bwpInfo;
 } CoderInfo;
 
 typedef struct {
