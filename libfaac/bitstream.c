@@ -102,7 +102,8 @@ static int WriteReorderedSpectralData(CoderInfo *coderInfo,
 static void calc_CRC(BitStream *bitStream, int len);
 #endif
 
-
+#if 0
+// 调用的代码已经注释掉了，这里减少编译警告
 static int WriteFAACStr(BitStream *bitStream, char *version, int write)
 {
   int i;
@@ -141,7 +142,7 @@ static int WriteFAACStr(BitStream *bitStream, char *version, int write)
 
   return bitcnt;
 }
-
+#endif
 
 int WriteBitstream(faacEncStruct* hEncoder,
                    CoderInfo *coderInfo,
@@ -164,8 +165,9 @@ int WriteBitstream(faacEncStruct* hEncoder,
 
 /* sur: faad2 complains about scalefactor error if we are writing FAAC String */
 #ifndef DRM
-    if (hEncoder->frameNum == 4)
-      WriteFAACStr(bitStream, hEncoder->config.name, 1);
+	// 部分播放器无法解析这个字段，会报错，这里删掉
+    // if (hEncoder->frameNum == 4)
+    //   WriteFAACStr(bitStream, hEncoder->config.name, 1);
 #endif
 
     for (channel = 0; channel < numChannel; channel++) {
@@ -254,8 +256,9 @@ static int CountBitstream(faacEncStruct* hEncoder,
 
 /* sur: faad2 complains about scalefactor error if we are writing FAAC String */
 #ifndef DRM
-    if (hEncoder->frameNum == 4)
-      bits += WriteFAACStr(bitStream, hEncoder->config.name, 0);
+	// 部分播放器无法解析这个字段，会报错，这里删掉
+    // if (hEncoder->frameNum == 4)
+    //   bits += WriteFAACStr(bitStream, hEncoder->config.name, 0);
 #endif
 
     for (channel = 0; channel < numChannel; channel++) {

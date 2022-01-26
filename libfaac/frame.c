@@ -492,7 +492,8 @@ int FAACAPI faacEncEncode(faacEncHandle hpEncoder,
 		}
     }
 
-    if (hEncoder->frameNum <= 3) /* Still filling up the buffers */
+	// 前面已经把多余的两个nextSampleBuff删了，这里也需要减2
+    if (hEncoder->frameNum <= 1) /* Still filling up the buffers */
         return 0;
 
     /* Psychoacoustics */
