@@ -103,11 +103,13 @@ static void PsyCheckShort(PsyInfo * psyInfo, float quality)
               toteng += (eng[sfb] < lasteng[sfb]) ? eng[sfb] : lasteng[sfb];
               volchg += fabs(eng[sfb] - lasteng[sfb]);
           }
-
-          if ((volchg / toteng * quality) > 3.0)
-          {
-              psyInfo->block_type = ONLY_SHORT_WINDOW;
-              break;
+          // 部分芯片可能触发除0异常，这里需要处理
+          if (toteng != 0.0 && quality != 0.0) {
+            if ((volchg / toteng * quality) > 3.0)
+            {
+                psyInfo->block_type = ONLY_SHORT_WINDOW;
+                break;
+            }
           }
       }
       lasteng = eng;
