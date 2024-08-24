@@ -4,19 +4,31 @@ project (faac_static LANGUAGES C)
 add_compile_options(-Wall -O2 -g)
 set(CMAKE_BUILD_TYPE "Debug")
 
-add_compile_definitions(
-    # Define if you have the <immintrin.h> header file.
-    HAVE_IMMINTRIN_H
+# Include CheckIncludeFile module
+include(CheckIncludeFile)
 
-    # Define if you have the <inttypes.h> header file.
-    # HAVE_INTTYPES_H
-    
-    # Define  if you have the <stdint.h> header file.
-    # HAVE_STDINT_H
-    
-    # Define to 1 if you have the <sys/types.h> header file.
-    # HAVE_SYS_TYPES_H
-    )
+# Check for specific header files and define macros accordingly
+check_include_file("immintrin.h" HAVE_IMMINTRIN_H)
+check_include_file("inttypes.h" HAVE_INTTYPES_H)
+check_include_file("stdint.h" HAVE_STDINT_H)
+check_include_file("sys/types.h" HAVE_SYS_TYPES_H)
+
+# Add compile definitions based on the header checks
+if(HAVE_IMMINTRIN_H)
+    add_compile_definitions(HAVE_IMMINTRIN_H)
+endif()
+
+if(HAVE_INTTYPES_H)
+    add_compile_definitions(HAVE_INTTYPES_H)
+endif()
+
+if(HAVE_STDINT_H)
+    add_compile_definitions(HAVE_STDINT_H)
+endif()
+
+if(HAVE_SYS_TYPES_H)
+    add_compile_definitions(HAVE_SYS_TYPES_H)
+endif()
 
 list(APPEND FAAC_SOURCE
     ./bitstream.c
