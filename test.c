@@ -8,8 +8,8 @@ int main()
 {
     int i;
     faacEncHandle hEncoder;
-    uint64_t inputSamples = 0;
-    uint64_t maxOutputBytes = 0;
+    unsigned long inputSamples = 0;
+    unsigned long maxOutputBytes = 0;
     int32_t enc_out_len = 0;
     int32_t read_len = 0;
     FILE *fpr;
